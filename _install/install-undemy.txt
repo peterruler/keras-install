@@ -1,0 +1,21 @@
+# past as single line to a terminal by first doing a:
+# conda activate tensorflow (name of your env e.e. tensorflow)
+conda install -y numpy &&
+conda install -y pandas &&
+conda install -y matplotlib &&
+conda install -y scikit-learn &&
+conda install -y xlrd &&
+conda install -y openpyxl &&
+conda install -y lxml &&
+conda install -y sqlalchemy &&
+conda install -y seaborn &&
+conda install -y -c plotly chart-studio &&
+conda install -y -c conda-forge cufflinks-pyb &&
+conda install -y pandas-datareader &&
+conda install -y pydot &&
+conda install -y raphviz &&
+conda install -y -v pyspark &&
+conda install -y pip &&
+conda install -y conda-forge::tensorflow-datasets &&
+pip install -y tensorboard &&
+conda install -y jupyterlab
