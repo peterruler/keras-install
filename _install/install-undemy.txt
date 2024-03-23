@@ -1,5 +1,5 @@
 # past as single line to a terminal by first doing a:
-# conda activate tensorflow (name of your env e.e. tensorflow)
+# conda activate tensorflow (name of your env e.g. tensorflow)
 conda install -y numpy &&
 conda install -y pandas &&
 conda install -y matplotlib &&
