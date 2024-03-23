@@ -28,11 +28,16 @@ rm -rf ~/.anaconda_backup
 - `conda install -c conda-forge nb_conda`
 - `conda install -c anaconda tensorflow-gpu`
 - `conda env update --file /path/to/tools.yml`
+- or
+- `conda env update --file tools-m1-udemy.yml`
+- and
+- `conda install -c conda-forge cufflinks-pyb`
+- then as usual, test with
 - `jupyter notebook`
-
+- and
 - `python check.py`
 ```
-# run: python check.py - with contents:
+# run: python check.py - with contents of the check.py file:
 # in base env:
 # conda installtensorflow
 # What version of Python do you have?
