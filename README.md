@@ -55,23 +55,25 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 
 # Kurs Deep Learning mit Keras und Tensorflow 2
 - https://www.udemy.com/course/deep-learning-tensorflow
-
+# Jeff Heaton installation
+- https://www.youtube.com/watch?v=mcIKDJYeyFY
 ```
+conda env remove -y --name py37 
+
 ## create empty environment
 conda create -y -n py37
 
 ## activate
 conda activate py37
 
-## use x86_64 architecture channel(s)
-conda config --env --set subdir osx-64
+## use osx-arm64 / x86_64 architecture channel(s)
+conda config --env --set subdir x86_64 # intelmac
 
 ## install python, numpy, etc. (add more packages here...)
 conda install -y python=3.7
 
-conda install -y -c conda-forge nb_conda
-conda env update --file ./_install/tools-m1-udemy.yml
-
+# conda install -y -c conda-forge nb_conda
+# conda env update --file ./_install/tools-m1-udemy.yml
 conda install -y numpy &&
 conda install -y pandas &&
 conda install -y matplotlib &&
@@ -90,7 +92,7 @@ conda install -y -v pyspark &&
 conda install -y pip &&
 conda install -y conda-forge::tensorflow-datasets &&
 conda install -y jupyter
-pip install tensorflow==2.2.0
-# pip install --user install tensorflow-macos==2.5.0 && 
-# pip install --user install tensorflow-metal==0.1.1 
+
+pip install --upgrade tensorflow==2.2.0
+pip install --upgrade keras==2.2.4
 ```
