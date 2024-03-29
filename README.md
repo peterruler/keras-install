@@ -52,3 +52,33 @@ print(f"Python {sys.version}")
 gpu = len(tf.config.list_physical_devices('GPU'))>0
 print("GPU is", "available" if gpu else "NOT AVAILABLE")
 ```
+
+# Kurs Deep Learning mit Keras und Tensorflow 2
+- https://www.udemy.com/course/deep-learning-tensorflow
+
+```
+conda create -y --name tensorflow3  python=3.8
+conda activate tensorflow3
+conda install -y -c conda-forge nb_conda
+conda env update --file ./_install/tools-m1-udemy.yml
+
+conda install -y numpy &&
+conda install -y pandas &&
+conda install -y matplotlib &&
+conda install -y scikit-learn &&
+conda install -y xlrd &&
+conda install -y openpyxl &&
+conda install -y lxml &&
+conda install -y sqlalchemy &&
+conda install -y seaborn &&
+conda install -y -c plotly chart-studio &&
+conda install -y -c conda-forge cufflinks-pyb &&
+conda install -y pandas-datareader &&
+conda install -y pydot &&
+conda install -y raphviz &&
+conda install -y -v pyspark &&
+conda install -y pip &&
+conda install -y conda-forge::tensorflow-datasets &&
+pip install --user install tensorflow-macos==2.5.0 && 
+pip install --user install tensorflow-metal==0.1.1 
+```
