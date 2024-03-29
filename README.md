@@ -57,8 +57,18 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 - https://www.udemy.com/course/deep-learning-tensorflow
 
 ```
-conda create -y --name tensorflow3  python=3.8
-conda activate tensorflow3
+## create empty environment
+conda create -y -n py37
+
+## activate
+conda activate py37
+
+## use x86_64 architecture channel(s)
+conda config --env --set subdir osx-64
+
+## install python, numpy, etc. (add more packages here...)
+conda install -y python=3.7
+
 conda install -y -c conda-forge nb_conda
 conda env update --file ./_install/tools-m1-udemy.yml
 
@@ -79,6 +89,8 @@ conda install -y raphviz &&
 conda install -y -v pyspark &&
 conda install -y pip &&
 conda install -y conda-forge::tensorflow-datasets &&
-pip install --user install tensorflow-macos==2.5.0 && 
-pip install --user install tensorflow-metal==0.1.1 
+conda install -y jupyter
+pip install tensorflow==2.2.0
+# pip install --user install tensorflow-macos==2.5.0 && 
+# pip install --user install tensorflow-metal==0.1.1 
 ```
