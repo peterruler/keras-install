@@ -18,7 +18,7 @@ source ~/.bashrc
 rm -rf ~/.anaconda_backup
 ```
 
-# reinstall miniconda with env tensorflow
+# reinstall miniconda with env tensorflow m1 mac
 - Download miniconda M1 Arm Mac 64 bits pkg:
 - from: https://docs.anaconda.com/free/miniconda/
 - Then in a terminal run all these commands
@@ -27,10 +27,7 @@ rm -rf ~/.anaconda_backup
 - `conda activate tensorflow`
 - `conda install -c conda-forge nb_conda`
 - `conda install -c anaconda tensorflow-gpu`
-- `conda env update --file /path/to/tools.yml`
-- or
-- `conda env update --file tools-m1-udemy.yml`
-- and
+- `conda env update --file /path/to/tensorflow-m1mac.yml`
 - `conda install -c conda-forge cufflinks-pyb`
 - then as usual, test with
 - `jupyter notebook`
@@ -55,25 +52,14 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 
 # Kurs Deep Learning mit Keras und Tensorflow 2
 - https://www.udemy.com/course/deep-learning-tensorflow
-# Jeff Heaton installation
+# Jeff Heaton installation intel mac Python <= 3.8
 - https://www.youtube.com/watch?v=mcIKDJYeyFY
+- https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/manual_setup.ipynb
 ```
-conda env remove -y --name py37 
+# conda env remove -y --name name-of-env
 
-## create empty environment
-conda create -y -n py37
-
-## activate
-conda activate py37
-
-## use osx-arm64 / x86_64 architecture channel(s)
-conda config --env --set subdir x86_64 # intelmac
-
-## install python, numpy, etc. (add more packages here...)
-conda install -y python=3.7
-
-# conda install -y -c conda-forge nb_conda
-# conda env update --file ./_install/tools-m1-udemy.yml
+conda create -y --name tensorflow python=3.6
+source activate tensorflow
 conda install -y numpy &&
 conda install -y pandas &&
 conda install -y matplotlib &&
@@ -92,6 +78,8 @@ conda install -y -v pyspark &&
 conda install -y pip &&
 conda install -y conda-forge::tensorflow-datasets &&
 conda install -y jupyter
+
+conda update -y --all
 
 pip install --upgrade tensorflow==2.2.0
 pip install --upgrade keras==2.2.4
