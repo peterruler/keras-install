@@ -1,5 +1,6 @@
 
-# Tensorflow / Keras with M1 Mac Apple Metal GPU support
+# Tensorflow / Keras with M1 Mac Apple Metal GPU and Intel Mac support
+## Steps to install miniconda with tensorflow2 / Keras on Mac M1 with GPU support and Intel Mac Python 3.7 support
 
 - explanation: https://www.youtube.com/watch?v=o4-bI_iZKPA
 
@@ -56,7 +57,7 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 - https://www.youtube.com/watch?v=mcIKDJYeyFY
 - https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/manual_setup.ipynb
 ```
-# conda env remove -y --name name-of-env
+# conda env remove -y --name nameof-env
 
 conda create -y --name tensorflow python=3.6
 source activate tensorflow
