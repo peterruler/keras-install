@@ -27,7 +27,6 @@ rm -rf ~/.anaconda_backup
 - `conda create --name tensorflow python=3.9`
 - `conda activate tensorflow`
 - `conda install -c conda-forge nb_conda`
-- `conda install -c anaconda tensorflow-gpu`
 - `conda env update --file /path/to/tensorflow-m1mac.yml`
 - `conda install -c conda-forge cufflinks-pyb`
 - then as usual, test with
