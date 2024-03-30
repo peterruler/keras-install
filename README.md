@@ -58,8 +58,8 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 - https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/manual_setup.ipynb
 ```
 # conda env remove -y --name nameof-env
-
-conda create -y --name tensorflow python=3.6
+conda env create -v -f tensorflow-intelmac.yml
+# conda create -y --name tensorflow python=3.6
 source activate tensorflow
 conda install -y numpy &&
 conda install -y pandas &&
@@ -84,4 +84,6 @@ conda update -y --all
 
 pip install --upgrade tensorflow==2.2.0
 pip install --upgrade keras==2.2.4
+
+python -m ipykernel install --user --name tensorflow --display-name "Python 3.6 (tensorflow)"
 ```
