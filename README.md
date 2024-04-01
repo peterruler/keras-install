@@ -78,7 +78,6 @@ conda install -y -v pyspark &&
 conda install -y pip &&
 conda install -y conda-forge::tensorflow-datasets &&
 conda install -y jupyter
-conda install -y -c conda-forge cufflinks-pyb
 conda update -y --all
 
 pip install --upgrade tensorflow==2.2.0
